@@ -1,6 +1,6 @@
 {
   "name": "blorg",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Flexible static blog generator",
   "type": "module",
   "main": "lib/blorg.js",
