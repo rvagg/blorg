@@ -1,30 +1,45 @@
 #!/usr/bin/env node
 
-const blorg = require('..')
-    , fs    = require('fs')
-    , path  = require('path')
+import { readFile } from 'node:fs/promises'
+import { dirname, resolve } from 'node:path'
+import Blorg from '../lib/blorg.js'
 
 function printUsage () {
   console.error('Usage: blorg <config file>')
+  process.exit(1)
 }
 
-var configFile
-  , config
+async function main () {
+  const configPath = process.argv[2]
+  if (!configPath) {
+    printUsage()
+  }
 
-try {
-  configFile = fs.readFileSync(process.argv[2], 'utf8')
-} catch (e) {
-  return printUsage()
+  let configFile
+  try {
+    configFile = await readFile(configPath, 'utf8')
+  } catch {
+    console.error(`Error: Could not read config file: ${configPath}`)
+    printUsage()
+  }
+
+  let config
+  try {
+    config = JSON.parse(/** @type {string} */ (configFile))
+  } catch (e) {
+    console.error('Error parsing JSON:', e instanceof Error ? e.message : e)
+    printUsage()
+  }
+
+  const root = dirname(resolve(configPath))
+  const blorg = new Blorg(root, config)
+
+  try {
+    await blorg.run()
+  } catch (err) {
+    console.error(err instanceof Error ? err.stack : err)
+    process.exit(1)
+  }
 }
 
-try {
-  config = JSON.parse(configFile)
-} catch (e) {
-  console.error('Error parsing JSON:', e)
-  return printUsage()
-}
-
-blorg(
-    path.dirname(path.resolve(process.argv[2]))
-  , config
-)
+main()

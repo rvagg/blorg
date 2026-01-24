@@ -2,36 +2,148 @@
   "name": "blorg",
   "version": "1.0.0",
   "description": "Flexible static blog generator",
+  "type": "module",
   "main": "lib/blorg.js",
-  "bin": "bin/blorg.js",
-  "homepage": "https://github.com/rvagg/blorg",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rvagg/blorg"
+  "types": "types/lib/blorg.d.ts",
+  "bin": {
+    "blorg": "bin/blorg.js"
   },
-  "keywords": [
-    "blog"
-  ],
-  "authors": [
-    "Rod Vagg <rod@vagg.org> (https://github.com/rvagg)"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "after": "~0.8.1",
-    "brucedown": "~1.1.1",
-    "execute": "~0.1.0",
-    "map-async": "~0.1.1",
-    "mkdirp": "~0.5.1",
-    "ssbl": "~1.0.2",
-    "swig": "~1.4.2",
-    "xtend": "~4.0.0"
-  },
-  "devDependencies": {
-    "bustermove": "~1.0.0",
-    "referee": "~1.1.1",
-    "tap": "~0.7.1"
+  "exports": {
+    ".": {
+      "import": "./lib/blorg.js",
+      "types": "./types/lib/blorg.d.ts"
+    },
+    "./archetypes/blog": {
+      "import": "./lib/archetypes/blog.js",
+      "types": "./types/lib/archetypes/blog.d.ts"
+    },
+    "./archetypes/presentation": {
+      "import": "./lib/archetypes/presentation.js",
+      "types": "./types/lib/archetypes/presentation.d.ts"
+    }
   },
   "scripts": {
-    "test": "tap tests/*-test.js"
+    "lint": "standard bin/*.js lib/**/*.js",
+    "build": "npm run build:types",
+    "build:types": "tsc --build",
+    "prepublishOnly": "npm run build",
+    "test": "npm run lint && npm run build",
+    "test:ci": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvagg/blorg.git"
+  },
+  "keywords": [
+    "blog",
+    "static",
+    "generator",
+    "markdown"
+  ],
+  "author": "Rod Vagg <rod@vagg.org> (http://r.va.gg/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rvagg/blorg/issues"
+  },
+  "homepage": "https://github.com/rvagg/blorg#readme",
+  "dependencies": {
+    "brucedown": "^2.0.1",
+    "nunjucks": "^3.2.4",
+    "ssbl": "^2.0.1"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.2",
+    "@semantic-release/npm": "^13.1.3",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "@types/node": "^25.0.10",
+    "@types/nunjucks": "^3.2.6",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
+    "semantic-release": "^25.0.2",
+    "standard": "^17.1.2",
+    "typescript": "^5.9.3"
+  },
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits",
+          "releaseRules": [
+            {
+              "breaking": true,
+              "release": "major"
+            },
+            {
+              "revert": true,
+              "release": "patch"
+            },
+            {
+              "type": "feat",
+              "release": "minor"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "type": "chore",
+              "release": "patch"
+            },
+            {
+              "type": "docs",
+              "release": "patch"
+            },
+            {
+              "type": "test",
+              "release": "patch"
+            },
+            {
+              "scope": "no-release",
+              "release": false
+            }
+          ]
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits",
+          "presetConfig": {
+            "types": [
+              {
+                "type": "feat",
+                "section": "Features"
+              },
+              {
+                "type": "fix",
+                "section": "Bug Fixes"
+              },
+              {
+                "type": "chore",
+                "section": "Trivial Changes"
+              },
+              {
+                "type": "docs",
+                "section": "Trivial Changes"
+              },
+              {
+                "type": "test",
+                "section": "Tests"
+              }
+            ]
+          }
+        }
+      ],
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      "@semantic-release/git"
+    ]
   }
 }
