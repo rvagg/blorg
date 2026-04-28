@@ -1,3 +1,13 @@
+## [2.0.1](https://github.com/rvagg/blorg/compare/v2.0.0...v2.0.1) (2026-04-28)
+
+### Bug Fixes
+
+* exclude tsconfig.tsbuildinfo, update tsconfig ([c6d32b2](https://github.com/rvagg/blorg/commit/c6d32b280b1ce0baeba30922938b3a9429fc0d16))
+
+### Trivial Changes
+
+* **deps-dev:** bump typescript from 5.9.3 to 6.0.3 ([a90308b](https://github.com/rvagg/blorg/commit/a90308b71c44c6fbcd267a8837d4d23670d0df15))
+
 ## [2.0.0](https://github.com/rvagg/blorg/compare/v1.0.0...v2.0.0) (2026-01-24)
 
 ### ⚠ BREAKING CHANGES
