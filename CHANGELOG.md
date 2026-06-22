@@ -1,3 +1,9 @@
+## [2.0.2](https://github.com/rvagg/blorg/compare/v2.0.1...v2.0.2) (2026-06-22)
+
+### Trivial Changes
+
+* **deps:** bump actions/checkout from 6 to 7 ([#6](https://github.com/rvagg/blorg/issues/6)) ([90536d7](https://github.com/rvagg/blorg/commit/90536d71a2a1d969470384e8aacef5077bcde2ca))
+
 ## [2.0.1](https://github.com/rvagg/blorg/compare/v2.0.0...v2.0.1) (2026-04-28)
 
 ### Bug Fixes
