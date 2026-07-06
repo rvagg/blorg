@@ -60,7 +60,7 @@
     "@semantic-release/release-notes-generator": "^14.1.0",
     "@types/node": "^26.0.1",
     "@types/nunjucks": "^3.2.6",
-    "conventional-changelog-conventionalcommits": "^9.1.0",
+    "conventional-changelog-conventionalcommits": "^10.2.0",
     "semantic-release": "^25.0.2",
     "standard": "^17.1.2",
     "typescript": "^6.0.3"
