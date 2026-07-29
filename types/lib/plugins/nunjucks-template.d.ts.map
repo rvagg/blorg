@@ -1,1 +1,1 @@
-{"version":3,"file":"nunjucks-template.d.ts","sourceRoot":"","sources":["../../../lib/plugins/nunjucks-template.js"],"names":[],"mappings":"AA6FA;;;;;;;GAOG;AACH,gDANW,OAAO,aAAa,EAAE,OAAO,UAErC;IAAuB,YAAY,EAA3B,MAAM;IACS,IAAI,EAAnB,MAAM;CACd,GAAU,OAAO,UAAU,CAiD7B"}
+{"version":3,"file":"nunjucks-template.d.ts","sourceRoot":"","sources":["../../../lib/plugins/nunjucks-template.js"],"names":[],"mappings":"AA6FA;;;;;;;GAOG;AACH,wBAA8B,gBAAgB,CAAE,KAAK,EAN1C,OAAO,aAAa,EAAE,OAMoB,EAAE,MAAM,EAJ1D;IAAuB,YAAY,EAA3B,MAAM,CACd;IAAuB,IAAI,EAAnB,MAAM,CACd;CAE0D,GAFhD,OAAO,UAAU,CAiD7B"}

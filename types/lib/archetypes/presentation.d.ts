@@ -1,4 +1,43 @@
 /**
+ * @typedef {Object} PresentationDataConfig
+ * @property {string} id
+ * @property {string} type
+ * @property {Record<string, string>} [files]
+ * @property {string} [file]
+ * @property {string} [splitter]
+ */
+export type PresentationDataConfig = {
+    id: string;
+    type: string;
+    files?: Record<string, string>;
+    file?: string;
+    splitter?: string;
+};
+export type PresentationOutputConfig = {
+    id: string;
+    type: string;
+    output?: string;
+    template?: string;
+    data?: string[];
+};
+export type PresentationConfig = {
+    templateRoot: string;
+    outputRoot: string;
+    data: PresentationDataConfig[];
+    output: PresentationOutputConfig[];
+};
+export type PresentationOptions = {
+    /**
+     * - Mapping of keys to markdown files
+     */
+    files: Record<string, string>;
+    templateEngine?: string;
+    template?: string;
+    output?: string;
+    splitter?: string;
+    outputRoot?: string;
+};
+/**
  * @typedef {Object} PresentationOptions
  * @property {Record<string, string>} files - Mapping of keys to markdown files
  * @property {string} [templateEngine]
@@ -13,35 +52,4 @@
  * @returns {PresentationConfig}
  */
 export default function config(options: PresentationOptions): PresentationConfig;
-export type PresentationOptions = {
-    /**
-     * - Mapping of keys to markdown files
-     */
-    files: Record<string, string>;
-    templateEngine?: string | undefined;
-    template?: string | undefined;
-    output?: string | undefined;
-    splitter?: string | undefined;
-    outputRoot?: string | undefined;
-};
-export type PresentationDataConfig = {
-    id: string;
-    type: string;
-    files?: Record<string, string> | undefined;
-    file?: string | undefined;
-    splitter?: string | undefined;
-};
-export type PresentationOutputConfig = {
-    id: string;
-    type: string;
-    output?: string | undefined;
-    template?: string | undefined;
-    data?: string[] | undefined;
-};
-export type PresentationConfig = {
-    templateRoot: string;
-    outputRoot: string;
-    data: PresentationDataConfig[];
-    output: PresentationOutputConfig[];
-};
 //# sourceMappingURL=presentation.d.ts.map

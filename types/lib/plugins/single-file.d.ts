@@ -7,7 +7,7 @@
  * @param {string} config.output
  * @param {Object} config.data
  */
-export default function singleFile(blorg: import("../blorg.js").default, config: {
+export default function singleFile(blorg: import('../blorg.js').default, config: {
     outputRoot: string;
     template: string;
     output: string;

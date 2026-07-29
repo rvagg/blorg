@@ -6,5 +6,5 @@
  * @param {string} outputRoot
  * @param {string} outputFile
  */
-export default function renderTemplate(blorg: import("./blorg.js").default, templateId: string, data: Object, outputRoot: string, outputFile: string): Promise<void>;
+export default function renderTemplate(blorg: import('./blorg.js').default, templateId: string, data: Object, outputRoot: string, outputFile: string): Promise<void>;
 //# sourceMappingURL=render-template.d.ts.map
