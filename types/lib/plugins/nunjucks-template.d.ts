@@ -6,7 +6,7 @@
  * @param {string} config.file
  * @returns {Promise<Function>}
  */
-export default function nunjucksTemplate(blorg: import("../blorg.js").default, config: {
+export default function nunjucksTemplate(blorg: import('../blorg.js').default, config: {
     templateRoot: string;
     file: string;
 }): Promise<Function>;

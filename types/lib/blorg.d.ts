@@ -1,3 +1,23 @@
+export type PluginConfig = {
+    type: string;
+    id: string;
+    /**
+     * - Data keys to load (for output plugins)
+     */
+    data?: string[];
+};
+export type BlorgConfig = {
+    templateRoot?: string;
+    outputRoot?: string;
+    /**
+     * - Data source plugins
+     */
+    data: PluginConfig[];
+    /**
+     * - Output processor plugins
+     */
+    output: PluginConfig[];
+};
 /**
  * @typedef {Object} PluginConfig
  * @property {string} type
@@ -12,11 +32,6 @@
  * @property {PluginConfig[]} output - Output processor plugins
  */
 export default class Blorg {
-    /**
-     * @param {string} root
-     * @param {BlorgConfig} config
-     */
-    constructor(root: string, config: BlorgConfig);
     root: string;
     config: BlorgConfig;
     /** @type {Record<string, any>} */
@@ -25,6 +40,11 @@ export default class Blorg {
     resolvedDirectories: Record<string, string>;
     /** @type {Record<string, string>} */
     resolvedFiles: Record<string, string>;
+    /**
+     * @param {string} root
+     * @param {BlorgConfig} config
+     */
+    constructor(root: string, config: BlorgConfig);
     /**
      * Run the blog generator
      */
@@ -48,7 +68,7 @@ export default class Blorg {
      * @param {'dir'|'file'} type
      * @returns {Promise<string>}
      */
-    _toPath(value: string, type: "dir" | "file"): Promise<string>;
+    _toPath(value: string, type: 'dir' | 'file'): Promise<string>;
     /**
      * @param {string} id
      * @returns {any}
@@ -60,31 +80,11 @@ export default class Blorg {
      */
     loadPlugin(pluginConfig: PluginConfig & BlorgConfig, saveOutput: boolean): Promise<void>;
 }
-export namespace archetypes {
-    export { blogArchetype as blog };
-    export { presentationArchetype as presentation };
-}
-export type PluginConfig = {
-    type: string;
-    id: string;
-    /**
-     * - Data keys to load (for output plugins)
-     */
-    data?: string[] | undefined;
-};
-export type BlorgConfig = {
-    templateRoot?: string | undefined;
-    outputRoot?: string | undefined;
-    /**
-     * - Data source plugins
-     */
-    data: PluginConfig[];
-    /**
-     * - Output processor plugins
-     */
-    output: PluginConfig[];
-};
 import blogArchetype from './archetypes/blog.js';
 import presentationArchetype from './archetypes/presentation.js';
 export { blogArchetype, presentationArchetype };
+export declare const archetypes: {
+    blog: typeof blogArchetype;
+    presentation: typeof presentationArchetype;
+};
 //# sourceMappingURL=blorg.d.ts.map

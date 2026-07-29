@@ -1,3 +1,12 @@
+export type BlogPost = {
+    spec: {
+        path: string;
+    };
+    page: string;
+};
+export type PostFilesData = {
+    blogPosts: BlogPost[];
+};
 /**
  * @typedef {Object} BlogPost
  * @property {Object} spec
@@ -16,18 +25,9 @@
  * @param {string} config.template
  * @param {PostFilesData} config.data
  */
-export default function postFiles(blorg: import("../blorg.js").default, config: {
+export default function postFiles(blorg: import('../blorg.js').default, config: {
     outputRoot: string;
     template: string;
     data: PostFilesData;
 }): Promise<void>;
-export type BlogPost = {
-    spec: {
-        path: string;
-    };
-    page: string;
-};
-export type PostFilesData = {
-    blogPosts: BlogPost[];
-};
 //# sourceMappingURL=post-files.d.ts.map
