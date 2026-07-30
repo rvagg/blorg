@@ -1,12 +1,33 @@
 ## [2.0.8](https://github.com/rvagg/blorg/compare/v2.0.7...v2.0.8) (2026-07-29)
 
+### Trivial Changes
+
+* **deps-dev:** bump typescript from 6.0.3 to 7.0.2 ([75f710b](https://github.com/rvagg/blorg/commit/75f710b15384aef6f1f096b0e5a3b7f3e63098d8))
+* fixes for ts@7 ([eaacf29](https://github.com/rvagg/blorg/commit/eaacf29810582875ec11bdbc86da99a0adf2fac6))
+
 ## [2.0.7](https://github.com/rvagg/blorg/compare/v2.0.6...v2.0.7) (2026-07-27)
+
+### Trivial Changes
+
+* **deps:** bump the github-actions-minor-patch group with 2 updates ([#12](https://github.com/rvagg/blorg/issues/12)) ([eb2f152](https://github.com/rvagg/blorg/commit/eb2f15213b69f49ce1a4aef45b2c4b96ebffb70a))
 
 ## [2.0.6](https://github.com/rvagg/blorg/compare/v2.0.5...v2.0.6) (2026-07-21)
 
+### Trivial Changes
+
+* **ci:** slow down dependabot, add depsound, pin actions by hash ([#11](https://github.com/rvagg/blorg/issues/11)) ([e4af243](https://github.com/rvagg/blorg/commit/e4af243139090d7489c203235b4b132180f2d5c4))
+
 ## [2.0.5](https://github.com/rvagg/blorg/compare/v2.0.4...v2.0.5) (2026-07-20)
 
+### Trivial Changes
+
+* **deps:** bump actions/setup-node from 6 to 7 ([#9](https://github.com/rvagg/blorg/issues/9)) ([4228abd](https://github.com/rvagg/blorg/commit/4228abda4a984e499a90bf63d5a66ed6bb07b337))
+
 ## [2.0.4](https://github.com/rvagg/blorg/compare/v2.0.3...v2.0.4) (2026-07-06)
+
+### Trivial Changes
+
+* **deps-dev:** bump conventional-changelog-conventionalcommits ([#7](https://github.com/rvagg/blorg/issues/7)) ([6001759](https://github.com/rvagg/blorg/commit/6001759c26540140632bfdae867838f8e23d6985))
 
 ## [2.0.3](https://github.com/rvagg/blorg/compare/v2.0.2...v2.0.3) (2026-07-06)
 
