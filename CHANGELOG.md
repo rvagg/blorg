@@ -1,3 +1,9 @@
+## [2.0.9](https://github.com/rvagg/blorg/compare/v2.0.8...v2.0.9) (2026-07-30)
+
+### Trivial Changes
+
+* downgrade broken changelog maker, backfill entries ([#13](https://github.com/rvagg/blorg/issues/13)) ([b4b0014](https://github.com/rvagg/blorg/commit/b4b0014c696857e3526bb9c0b30d5968d4f45506))
+
 ## [2.0.8](https://github.com/rvagg/blorg/compare/v2.0.7...v2.0.8) (2026-07-29)
 
 ### Trivial Changes
