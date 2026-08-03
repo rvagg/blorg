@@ -1,3 +1,9 @@
+## [2.0.11](https://github.com/rvagg/blorg/compare/v2.0.10...v2.0.11) (2026-08-03)
+
+### Trivial Changes
+
+* **deps-dev:** bump @semantic-release/changelog from 6.0.3 to 7.0.0 ([#17](https://github.com/rvagg/blorg/issues/17)) ([74694a3](https://github.com/rvagg/blorg/commit/74694a33c67680b998c5bdcc0cbb24adfc6dae81))
+
 ## [2.0.10](https://github.com/rvagg/blorg/compare/v2.0.9...v2.0.10) (2026-08-03)
 
 ### Trivial Changes
