@@ -1,3 +1,9 @@
+## [2.0.12](https://github.com/rvagg/blorg/compare/v2.0.11...v2.0.12) (2026-08-03)
+
+### Trivial Changes
+
+* **deps-dev:** bump @semantic-release/git from 10.0.1 to 11.0.1 ([#16](https://github.com/rvagg/blorg/issues/16)) ([870c646](https://github.com/rvagg/blorg/commit/870c646e35179f8f303d4551be7a7affdd2d3cdd))
+
 ## [2.0.11](https://github.com/rvagg/blorg/compare/v2.0.10...v2.0.11) (2026-08-03)
 
 ### Trivial Changes
