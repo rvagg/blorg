@@ -1,3 +1,9 @@
+## [2.0.13](https://github.com/rvagg/blorg/compare/v2.0.12...v2.0.13) (2026-10-19)
+
+### Trivial Changes
+
+* **deps:** bump actions/setup-node ([#20](https://github.com/rvagg/blorg/issues/20)) ([97442c5](https://github.com/rvagg/blorg/commit/97442c526a917c37b0fd53a0e3be8068db6e4500))
+
 ## [2.0.12](https://github.com/rvagg/blorg/compare/v2.0.11...v2.0.12) (2026-08-03)
 
 ### Trivial Changes
