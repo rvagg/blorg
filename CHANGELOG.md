@@ -1,3 +1,9 @@
+## [2.0.14](https://github.com/rvagg/blorg/compare/v2.0.13...v2.0.14) (2026-11-02)
+
+### Trivial Changes
+
+* **deps:** bump the github-actions-minor-patch group with 2 updates ([#21](https://github.com/rvagg/blorg/issues/21)) ([704c03b](https://github.com/rvagg/blorg/commit/704c03be4e11588d7c7faa34bc41b740ea7d10bd))
+
 ## [2.0.13](https://github.com/rvagg/blorg/compare/v2.0.12...v2.0.13) (2026-10-19)
 
 ### Trivial Changes
